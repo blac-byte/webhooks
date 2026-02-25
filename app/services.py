@@ -38,7 +38,7 @@ def process_event(event: Event):
 
         
 
-def normalize_event(stripe_event, db_event):
+def normalize_event(stripe_event):
     if stripe_event.get("type") != "payment_intent.succeeded":
         return None
 

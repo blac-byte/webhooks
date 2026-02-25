@@ -6,6 +6,7 @@ from django.views import View
 from django.http import HttpResponse, JsonResponse
 from django.utils.decorators import method_decorator
 from django.db import IntegrityError
+from django.shortcuts import render
 from django.views.decorators.csrf import csrf_exempt
 
 endpoint_secret='whsec_c421b9ac971a479fe95e39ccb0952a3c01ce355962eb7e8f547563c00c94040e'
@@ -135,3 +136,8 @@ def events(request):
     ]
 
     return JsonResponse(data, safe=False)
+
+
+def dashboard(request):
+    return render(request, "app/dashboard.html")
+
