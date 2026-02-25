@@ -130,6 +130,7 @@ def events(request):
         "id": e.id,
         "source": e.source,
         "status": e.status,
+        "normalized_payload": e.normalized_payload,
         "created_at": e.created_at,
         }
         for e in events

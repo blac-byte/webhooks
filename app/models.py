@@ -23,6 +23,7 @@ class Event(models.Model):
     )
     created_at = models.DateTimeField(auto_now_add=True)
     processing_started_at = models.DateTimeField(null=True, blank=True)
+    processed_at = models.DateTimeField(null=True, blank=True)
     processing_error = models.TextField(null=True, blank=True)
 
     class Meta:

@@ -35,7 +35,8 @@ function App() {
         <thead>
           <tr>
             <th>ID</th>
-            <th>Type</th>
+            <th>Status</th>
+            <th>Normalized Payload</th>
             <th>Created</th>
           </tr>
         </thead>
@@ -44,6 +45,7 @@ function App() {
             <tr key={event.id}>
               <td>{event.id}</td>
               <td>{event.status}</td>
+              <td>{JSON.stringify(event.normalized_payload)}</td>
               <td>{new Date(event.created_at).toLocaleString()}</td>
             </tr>
           ))}
